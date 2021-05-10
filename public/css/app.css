@@ -48,3 +48,27 @@ nav ul {
 nav li {
     margin-right: 1rem;
 }
+
+
+label{
+    display: block;
+}
+
+input,
+textarea,
+select {
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    width: 400px;
+    max-width: 50%;
+}
+
+.flash {
+    padding: 20px;
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin:1rem;
+    border-radius: 5px;
+}
+
+.flash-success {background: #b3f8c2;}
