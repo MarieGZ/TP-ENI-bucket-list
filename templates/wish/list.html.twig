@@ -5,9 +5,11 @@
     <section class="wishes-list">
         {% for wish in wishes %}
             <article>
-                <a href="{{ path('wish_details',{'id': wish.id}) }}" title="Voir le détail du voeux">
-                    {{ wish.title }}
-                </a>
+                <a href="{{ path('wish_details',{'id': wish.id}) }}" title="Voir le détail du voeu ">
+                    {{ wish.title }} </a>
+                <br>
+                <div>{{ wish.category.name }}</div>
+
             </article>
             </br>
         {% endfor %}

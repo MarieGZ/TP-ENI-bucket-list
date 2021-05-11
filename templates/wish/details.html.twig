@@ -6,6 +6,9 @@
 
 {% block body %}
     <h2>{{ wish.title }}</h2>
+    <div class="category">
+        <div>Catégorie : {{ wish.category.name }}</div>
+    </div>
     <div>{{ wish.description }}</div>
     <br>
     <div>Créé par {{ wish.author }} le {{ wish.dateCreated |date ('d/m/Y') }}</div>
