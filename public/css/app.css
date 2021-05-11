@@ -72,3 +72,8 @@ select {
 }
 
 .flash-success {background: #b3f8c2;}
+
+.category-list,
+.info {
+    font-size: smaller;
+}

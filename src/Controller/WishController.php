@@ -18,7 +18,7 @@ class WishController extends AbstractController
      */
     public function list(WishRepository $wishRepository): Response
     {
-        $wishes = $wishRepository->findBy([],['dateCreated'=>'DESC'],20);
+        $wishes = $wishRepository->findWishes();
 
         return $this->render('wish/list.html.twig', [
         "wishes" => $wishes
@@ -31,6 +31,7 @@ class WishController extends AbstractController
     public function details($id, WishRepository $wishRepository): Response
     {
         $wish =$wishRepository->find($id);
+        //todo:diriger vers un 404 si 0 voeux en BDD
         return $this->render('wish/details.html.twig', [
             'wish'=>$wish
         ]);
